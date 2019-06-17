@@ -1,0 +1,33 @@
+----Reading Data----
+
+----Mean vector and covariance matrix of the training data are saved----
+
+----All eigenvalues and eigenvectors of the training data are saved----
+
+----Only one eigenvalue 0 was found to repeat 116 times----
+
+----All eigenvectors were found to be orthogonal----
+
+----Gram-Schmidt Orthogonlisation was added----
+
+----Function to reduce dimensions of the training data added----
+
+----Reconstruction Error plot was plotted----
+
+----Surface Curve plotted for accuracy at different k and m: Optimal values found were m=51, k=6 with highest accuracy achieved on validation set = 97.1% ----
+
+----The data was plotted on 2D space and all the instances of same class label were found to be clustered----
+
+----Accuracy achieved by KNN classifier in sklearn was 96.9%----
+
+----Running on test data----
+
+----Reducing dimensions of training data set----
+
+----Reducing dimensions of test data set----
+
+----Running classifier----
+
+----The accuracy achieved on the test dataset is :93.8%----
+
+----The accuracy achieved on the test dataset by sklearn KNN classifier is :92.5%----

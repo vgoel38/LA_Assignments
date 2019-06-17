@@ -1,0 +1,59 @@
+
+
+1.The degree distribution of the nodes has been plotted. It resembles Binomial distribution, which can turn into Poisson for more number of nodes.
+
+
+2.The histogram has been plotted. The top two central nodes are 11 and 7
+
+
+3.The most central edge is the edge between nodes 6 and 18
+
+
+4.All eigenvalues, as follows, are real.
+[ 1.73675441e+00  1.70229138e+00  1.60994361e+00  1.52870407e+00
+  1.45962818e+00  1.39629626e+00  1.24802361e+00  1.19926841e+00
+  1.00824005e+00  9.91641675e-01  8.27687874e-01  8.08429186e-01
+  7.40138581e-01  6.84443980e-01  6.11293015e-01  4.07823929e-01
+  3.93917822e-02 -2.60135108e-10]
+
+
+5.The two smallest eigenvalues are -2.6013510752008686e-10 and 0.03939178217880512
+
+The corresponding eigenvectors are as follows
+
+[0.13, 0.23, 0.26, 0.29, 0.19, 0.26, 0.32, 0.19, 0.19, 0.29, 0.37, 0.19, 0.26, 0.23, 0.13, 0.13, 0.19, 0.23]
+
+[-0.15, -0.24, -0.3, -0.32, -0.21, -0.2, -0.35, -0.22, 0.18, 0.26, 0.35, 0.19, 0.27, 0.24, 0.13, 0.15, 0.18, 0.09]
+Error in smallest eigenvalue: 2.6013510752008686e-10
+Since all values in eigenvector corresponding to smallest eigenvalue should be equal, error: 5.0%
+
+
+6.The two clusters got are (say House A and House B respectively):
+[8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+[0, 1, 2, 3, 4, 5, 6, 7]
+
+The nodes were coloured using eigenvector wrt the second smallest eigenvalue and the plot was saved. The graph got divided into two clusters that were actually houses.
+
+
+7. The variability of House A is more than that of House B. Thus the House of Algebrician should befriend House A
+
+
+B1. The clusters formed by numpy are
+[8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+[8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+
+The clusters are exactly same as we got!!
+
+
+B2. To find more than two clusters, we can follow this approach:
+
+a. After getting the two clusters, we could apply k-means clustering to make more clusters.
+
+b. After getting the two clusters, we could pick the cluster with more variance and then limiting our graph to only this cluster, we could run our current algorithm to divide this into two clusters. We can repeat the algorithm on the three clusters and find more clusters similarly. The correctness of the idea is obviously questionable but it could be tried out.
+
+c. We could also pick “central” edges in the graph to look for clusters. We can delete the edges with the highest edge centrality and the connected components obtained can be treated as clusters. But this approach is limited to getting random number of clusters instead of a fixed number of clusters.
+
+
+B3. The clusters correspnoding to the eigenvector wrt 2nd largest eigenvalue has been drawn. As observed, the nodes of two different colours are scattered among each other and thus, do not really make separate clusters.
+
+B4.The central edge seems to be the one that connects the two clusters.
